@@ -1,0 +1,510 @@
+/*//// styele untuk tempat/bungkus  gambar ////*/
+.fakeimg {
+    background: linear-gradient(90deg, rgb(193, 177, 177) 0%,
+            rgb(97, 98, 95) 20%, rgb(193, 177, 177) 100%);
+    width: 90%;
+    margin: 20px;
+    border-radius: 50px;
+    height: 380px;
+    display: flex;
+    justify-content: center;
+    border: 10px solid rgb(47, 44, 44);
+
+
+}
+
+.fakeimg:hover {
+    transform: scale(1.02);
+    box-shadow: -3px -3px 7px rgba(0, 0, 0, .9), 3px 3px 5px rgba(0, 0, 0, .9);
+
+}
+
+/* styele untuk gambar  */
+.fakeimg img {
+    width: 90%;
+    padding: 8%;
+    border-radius: 50px;
+    height: 380px;
+    border: 10px solid rgb(47, 44, 44);
+}
+
+/* style untuk bungkus nama actor */
+.fakeimg-1 {
+    background: linear-gradient(90deg, rgb(193, 177, 177) 0%,
+            rgb(97, 98, 95) 10%, rgb(193, 177, 177) 100%);
+    height: 60px;
+    margin: 10px;
+    border-radius: 10px;
+    text-align: center;
+    font-display: 2px;
+    border: 5px solid rgb(224, 207, 207);
+
+}
+
+/* style untuk tulisan nama actor */
+.fakeimg-1 p {
+    text-align: center;
+    justify-content: center;
+    padding: 0px;
+    font-size: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-style: italic;
+}
+
+/* style untuk  bungkus elemenPopularity */
+
+.tanggal {
+    background: linear-gradient(90deg, rgb(193, 177, 177) 0%,
+            rgb(97, 98, 95) 10%, rgb(193, 177, 177) 100%);
+    height: 60px;
+    margin: 7px;
+    border-radius: 10px;
+    border: 5px solid rgb(224, 207, 207);
+}
+
+/* style untuk  tulisan  elemenPopularity */
+.tanggal p {
+    text-align: center;
+    justify-content: center;
+    font-size: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-style: italic;
+}
+
+/* /////////////////////////////////// */
+/* ////////////// style buat gambar yang berbaris /row / foto actore kebawah  ///////////////// */
+.bungkus-gambar {
+    background: linear-gradient(90deg, rgb(193, 177, 177) 0%,
+            rgb(97, 98, 95) 10%, rgb(193, 177, 177) 100%);
+    width: 90%;
+    margin: 20px;
+    border-radius: 50px;
+    height: 380px;
+    display: flex;
+    justify-content: center;
+    text-shadow: #5a2929;
+}
+
+/* style untuk gambar actore */
+.bungkus-gambar img {
+    width: 100%;
+    border-radius: 50px;
+    height: 380px;
+    border: 10px solid rgb(47, 44, 44);
+
+}
+
+/* /////////////////////////////// */
+
+
+/* ///// style untuk  judul  yang / pernyataan filem yang populer ///  */
+.judul {
+    background: linear-gradient(90deg, rgb(193, 177, 177) 0%,
+            rgb(97, 98, 95) 10%, rgb(193, 177, 177) 100%);
+    width: 99%;
+    border-radius: 50px;
+    height: 100px;
+    display: flex;
+    margin: 10px;
+    border: 5px solid rgb(74, 72, 72);
+}
+
+/*  style untuk judul  */
+.judul p {
+    justify-content: left;
+    margin: 25px;
+    font-size: 40px;
+    font-style: italic;
+    color: azure;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+/* ////////////////////////////// */
+/* ////////// stele untuk  body gambar flem   sebleah kanan // //////*/
+.bungkis {
+    -ms-flex: 70%;
+    flex: 70%;
+    background-color: rgb(249, 243, 243);
+    padding: 20px;
+    border: 10px solid rgb(52, 47, 47);
+}
+
+/* //// bungkus/ wadah untuk gambar gambar flem yang populer   */
+.bungkus2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* ////////// styele untuk gambar  ///////////// */
+.main3 {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 10px;
+    background: linear-gradient(90deg, rgb(193, 177, 177) 0%,
+            rgb(97, 98, 95) 10%, rgb(193, 177, 177) 100%);
+    height: 600px;
+    width: 60%;
+    border-radius: 20px;
+    margin: 8px;
+    border: 10px solid rgb(63, 57, 57);
+
+}
+
+.main3:hover {
+    transform: scale(1.02);
+    box-shadow: -3px -3px 7px rgba(0, 0, 0, .9), 3px 3px 5px rgba(0, 0, 0, .9);
+}
+
+.fakeimg-1 {
+    justify-content: center;
+    text-align: center;
+
+}
+
+/*  style gambar */
+
+.main3 img {
+    height: 400px;
+    padding: 15px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    border: 10px solid rgb(14, 14, 14);
+    transform: scale(1.02);
+    box-shadow: -3px -3px 7px rgba(0, 0, 0, .9), 3px 3px 5px rgba(0, 0, 0, .9);
+
+}
+
+/* style judul flem */
+
+.fakeimg1 p {
+    text-align: center;
+}
+
+/* style botten */
+.button-1 {
+    border-radius: 10px;
+    justify-content: center;
+    text-align: center;
+}
+
+button {
+    font-size: 20px;
+    width: 150px;
+    height: 30px;
+    border-radius: 40px;
+    justify-content: center;
+    text-align: center;
+}
+
+/* ////////////////////////// */
+
+/* ///// setail untuk garis horizontal ///// */
+.fakeimg-6 {
+    background-color: #423b3b;
+    width: 100%;
+    height: 100px;
+}
+
+/* /////////////////////// */
+
+/* //// style untuk  footer  */
+.footer-1 {
+    padding: 50px;
+    text-align: center;
+    background: linear-gradient(90deg, rgb(193, 177, 177) 0%,
+            rgb(97, 98, 95) 10%, rgb(193, 177, 177) 100%);
+}
+
+#atribut {
+    padding: 40px;
+    color: aliceblue;
+    font-size: 20px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+/* style untuk copy @ */
+h3 {
+    font-style: italic;
+    font-size: 40px;
+}
+
+.footer-1:hover {
+    transform: scale(1.02);
+    box-shadow: -3px -3px 7px rgba(0, 0, 0, .9), 3px 3px 5px rgba(0, 0, 0, .9);
+
+}
+
+
+/* /////////////////////// */
+
+
+
+/* Titik/peluru/indikator */
+.dot {
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active {
+    background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+.classHidden {
+    visibility: hidden;
+}
+
+.next {
+
+    text-align: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.login-1 {
+    justify-content: right;
+    text-align: rights;
+
+}
+
+input {
+    height: 55%;
+    width: 10%;
+    border-radius: 40px;
+    background-color: rgb(200, 197, 197);
+    justify-content: center;
+}
+
+.dot-1 {
+    justify-content: center;
+    text-align: center;
+}
+
+/* /////////////////// */
+
+/*  style untuk max width lanyar 1070 */
+@media screen and (max-width: 1070px) {
+    .fakeimg img {
+        width: 100%;
+        padding: 0px;
+        margin: 0px;
+        height: auto;
+        border-radius: 30px;
+    }
+}
+
+/*  style untuk max width lanyar 1230 */
+@media screen and (max-width: 1230px) {
+    .main3 {
+        display: flex;
+        width: 40%;
+        height: 100%;
+    }
+}
+
+/*  style untuk max width lanyar 700 */
+@media screen and (max-width: 700px) {
+    .main3 {
+        display: flex;
+        width: 100%;
+        height: 100%;
+    }
+
+    .bungkus2 button {
+        width: 30%;
+    }
+
+    input {
+        width: 90%;
+    }
+}
+
+/* Tata letak responsif - bila lebar layar kurang dari 500 piksel, buat tautan navigasi menumpuk di atas satu sama lain, bukan di samping satu sama lain */
+@media screen and (max-width: 500px) {
+    .navbar a {
+        float: none;
+        width: 100%;
+    }
+
+    .header-1 h1 {
+        font-size: 100%;
+    }
+
+    .bungkis img {
+        border-radius: 0px;
+    }
+
+    nav ul {
+
+        width: 40%;
+
+    }
+
+    .main3 {
+        display: flex;
+        width: 100%;
+        height: 100%;
+    }
+
+}
+
+/* Tata letak responsif - bila lebar layar kurang dari 400 piksel, buat tautan navigasi menumpuk di atas satu sama lain, bukan di samping satu sama lain */
+@media screen and (max-width: 400px) {
+    .header-1 {
+        width: 100%;
+    }
+
+    .header-1 h1 {
+        font-size: medium;
+    }
+
+    .side {
+        width: 100%;
+    }
+
+    .fakeimg img {
+        width: 100%;
+        height: 100%;
+        padding: 0px;
+        margin: 0px;
+    }
+
+    .bungkus-gambar {
+        width: 100%;
+        height: 50%;
+    }
+
+    .bungkis img {
+        width: 100%;
+        height: auto;
+    }
+
+    .judul {
+        height: 40px;
+    }
+
+    .judul p {
+        font-size: small;
+        margin: 5px;
+        padding: 0px;
+    }
+
+    nav ul {
+        width: 100%;
+    }
+}
+
+/* Tata letak responsif - bila lebar layar kurang dari 3075 piksel, buat tautan navigasi menumpuk di atas satu sama lain, bukan di samping satu sama lain */
+@media screen and (max-width: 375px) {
+    .bungkis {
+        width: 100%;
+        height: 100%;
+        flex-direction: column;
+    }
+
+    .fakeimg-1 {
+        width: 90%;
+    }
+
+    .bungkis img {
+        width: 100%;
+        bottom: 20%;
+        border-radius: 0px;
+
+    }
+
+    .navbar {
+        width: 100%;
+    }
+}
+
+
+/* Tata letak responsif - bila lebar layar kurang dari 560 piksel, buat tautan navigasi menumpuk di atas satu sama lain, bukan di samping satu sama lain */
+
+@media screen and (max-width: 360px) {
+    .navbar {
+        width: 100%;
+    }
+
+    .fakeimg1 {
+        width: 100%;
+        height: 100%;
+    }
+
+    .bungkis img {
+        width: 100%;
+        height: 100%;
+        border-radius: 0px;
+    }
+
+    .bungkis p {
+        font-size: small;
+    }
+
+    .button-1 button {
+        font-size: small;
+        width: 70%;
+    }
+
+    .next button {
+        font-size: small;
+        width: 70%;
+    }
+
+    .bungkus-gambar {
+        height: auto;
+    }
+
+    .judul {
+        height: 30px;
+    }
+
+    .judul p {
+        margin: 2px;
+        font-size: small;
+    }
+
+    .footer-1 {
+        font-size: small;
+    }
+
+    body {
+        width: 100%;
+    }
+
+    h2 {
+        font-size: 100%;
+    }
+}
+
+/* Tata letak responsif - bila lebar layar kurang dari 320 piksel, buat tautan navigasi menumpuk di atas satu sama lain, bukan di samping satu sama lain */
+@media screen and (max-width: 320px) {
+    h2 {
+        font-size: 100%;
+
+    }
+
+    .bungkus-gambar {
+        display: none;
+    }
+
+    img {
+        vertical-align: middle;
+    }
+
+}

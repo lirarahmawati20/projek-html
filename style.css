@@ -1,0 +1,671 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #e1cfcf;
+    padding: 20px;
+    font-family: Arial;
+}
+
+/* /////////////style untuk header ///////////// */
+header {
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+}
+
+nav {
+    font-size: 15px;
+    display: flex;
+    background-color: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(10px);
+    padding: 1rem;
+    justify-content: space-around;
+    height: 75px;
+    align-items: center;
+
+}
+
+nav ul {
+    width: 50%;
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+}
+
+nav ul li a {
+    color: rgb(50, 42, 42);
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    width: 60px;
+    height: 50px;
+    color: rgb(100, 207, 243);
+}
+
+a {
+    color: rgb(71, 51, 51);
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: rgb(20, 23, 24);
+}
+
+a i {
+    font-size: 20px;
+}
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    height: 20px;
+    justify-content: space-between;
+    position: relative;
+}
+
+.menu-toggle input {
+    position: absolute;
+    width: 40px;
+    height: 28px;
+    right: -6px;
+    top: -3px;
+    opacity: 0;
+    z-index: 2;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 28px;
+    height: 3px;
+    background-color: rgb(72, 60, 60);
+    border-radius: 3px;
+    transition: all 0.5s;
+}
+
+/* Stil untuk span kedua dari elemen dengan class 'menu-toggle' */
+.menu-toggle span:nth-child(2) {
+    transform-origin: 0 0;
+}
+
+/* Stil untuk span keempat dari elemen dengan class 'menu-toggle' */
+.menu-toggle span:nth-child(4) {
+    transform-origin: 0 0;
+}
+
+/* Stil untuk span kedua dari elemen dengan class 'menu-toggle' saat input checked aktif */
+.menu-toggle input:checked~span:nth-child(2) {
+    background-color: rgb(27, 25, 25);
+    transform: rotate(45deg)translate(-1px, -1px);
+}
+
+/* Stil untuk span ketiga dari elemen dengan class 'menu-toggle' saat input checked aktif */
+.menu-toggle input:checked~span:nth-child(3) {
+    transform: scale(0);
+}
+
+/* Stil untuk span keempat dari elemen dengan class 'menu-toggle' saat input checked aktif */
+.menu-toggle input:checked~span:nth-child(4) {
+    background-color: rgb(32, 25, 25);
+    transform: rotate(-45deg)translate(-2px, 0);
+}
+
+@media screen and (max-width:1078px) {
+    nav ul {
+        display: 50%;
+    }
+}
+
+@media screen and (max-width:1076px) {
+    .menu-toggle {
+        display: flex;
+    }
+
+    nav ul {
+        position: absolute;
+        left: -20px;
+        top: 32px;
+        width: 30%;
+        height: 100vh;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        z-index: -1;
+        background: linear-gradient(90deg, rgb(193, 177, 177) 0%,
+                rgb(97, 98, 95) 10%, rgb(193, 177, 177) 100%);
+        transform: translateX(-90%);
+        transition: all 1s;
+        opacity: 0;
+    }
+
+    nav ul.slide {
+        opacity: 1;
+        transform: translateX(0)
+    }
+}
+
+/* ////////////////////////////////////////////////// */
+.bg-image {
+    background-image: url("/aset/gambar1.jpg");
+    filter: blur(8px);
+    -webkit-filter: blur(8px);
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.bg-backgroun {
+    border: 5px solid #000000;
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    width: 80%;
+    padding: 20px;
+    text-align: center;
+    height: 100%;
+    border-radius: 30px;
+}
+
+.bg {
+    position: absolute;
+    top: 5%;
+    left: 10%;
+    width: 80%;
+    height: 50%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 30px;
+}
+
+.main-1 {
+    width: 95%;
+    height: 42%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    top: 58%;
+    padding: 5px;
+    margin: 3px;
+}
+
+.bg-1 img {
+    border-radius: 20px;
+    width: 80%;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    border: 5px solid rgb(10, 8, 8);
+}
+
+@media screen and (max-width: 10000px) {
+    .bg-image img {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .bg-backgroun {
+        width: 80%;
+        display: contents;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .bg img {
+        width: 80%;
+        position: relative;
+    }
+}
+
+/*////////////////////////// */
+
+.mai-3 {
+    max-width: 1000px;
+    margin: auto;
+}
+
+h1 {
+
+    padding: 1rem;
+    font-size: 50px;
+    word-break: break-all;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+hr {
+    color: black;
+}
+
+.row {
+    margin: 8px -16px;
+}
+
+.row,
+.row .column {
+    padding: 8px;
+    border-radius: 20px;
+}
+
+.column {
+    float: left;
+    width: 25%;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.content {
+    background-color: rgb(241, 235, 235);
+    padding: 10px;
+    border-radius: 30px;
+    border: 10px solid rgb(74, 72, 72);
+
+}
+
+.content img {
+
+    width: 100%;
+    height: 30%;
+    border-radius: 30px;
+    justify-content: center;
+    text-align: center;
+    border: 8px solid rgb(78, 77, 77);
+    transform: scale(1.02);
+    box-shadow: -3px -3px 7px rgba(0, 0, 0, .9), 3px 3px 5px rgba(0, 0, 0, .9);
+}
+
+h3 {
+    justify-content: center;
+    text-align: center;
+}
+
+@media screen and (max-width: 900px) {
+    .column {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .column {
+        width: 100%;
+    }
+}
+
+/* ///////// style untuk footer ////////// */
+
+.footer-1 {
+    padding: 50px;
+    text-align: center;
+    background: linear-gradient(90deg, rgb(193, 177, 177) 0%,
+            rgb(97, 98, 95) 10%, rgb(193, 177, 177) 100%);
+}
+
+.footer-1 a {
+    padding: 30px;
+    color: aliceblue;
+    font-size: 20px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.footer-1:hover {
+    transform: scale(1.02);
+    box-shadow: -3px -3px 7px rgba(0, 0, 0, .9), 3px 3px 5px rgba(0, 0, 0, .9);
+}
+
+.column:hover {
+    transform: scale(1.02);
+    box-shadow: -5px -5px 10px rgba(0, 0, 0, .9), 3px 3px 5px rgba(0, 0, 0, .9);
+    border-radius: 30px;
+    border: 10px solid rgb(14, 14, 14);
+}
+
+.tombol:hover {
+    transform: scale(1.02);
+    box-shadow: -3px -3px 7px rgba(0, 0, 0, .9), 3px 3px 5px rgba(0, 0, 0, .9);
+}
+
+/* style untuk gamabar foti scrol kanan */
+ul.images {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    height: 90%;
+    /* width: 100%; */
+    overflow-x: auto;
+    list-style: none;
+}
+
+ul.images li {
+    flex: 0 0 auto;
+    width: 300px;
+    height: 200px;
+}
+
+ul.images li img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+/* utuk tailer  */
+iframe {
+    width: 900px;
+    height: 330px;
+    border-radius: 20px;
+    justify-content: center;
+}
+
+
+/* //////////// responsif ////////////// */
+/* Tata letak responsif - bila lebar layar kurang dari 1979px - 354 px, buat tautan navigasi menumpuk di atas satu sama lain, bukan di samping satu sama lain */
+
+@media screen and (max-width:1979px) {
+    ul.images {
+        top: 40%;
+    }
+}
+
+@media screen and (max-width:1301px) {
+    iframe {
+        width: 730px;
+        height: 270px;
+    }
+
+    ul.images li {
+        flex: 0 0 auto;
+        width: 250px;
+        height: 200px;
+    }
+
+    ul.images li img {
+        max-width: 100%;
+        max-height: 100%;
+    }
+}
+
+@media screen and (max-width:1171px) {
+    .bg-backgroun {
+        top: 60%;
+    }
+
+    iframe {
+        width: 650px;
+        height: 250px;
+    }
+
+    ul.images li {
+        flex: 0 0 auto;
+        width: 250px;
+        height: 200px;
+    }
+
+    ul.images li img {
+        max-width: 100%;
+        max-height: 100%;
+    }
+}
+
+@media screen and (max-width:1021px) {
+    iframe {
+        width: 610px;
+        height: 250px;
+    }
+
+    ul.images {
+        width: 80%;
+    }
+
+    ul.images li {
+        width: 200px;
+        height: 150px;
+    }
+}
+
+@media screen and (max-width:1000px) {
+    iframe {
+        width: 550px;
+        height: 230px;
+        top: 100px;
+    }
+
+    .bg {
+        top: 100px;
+        width: 60%;
+        height: 40%;
+        left: 200px;
+    }
+
+    ul.images {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:941px) {
+    iframe {
+        width: 500px;
+        height: 230px;
+        top: 100px;
+    }
+
+    .bg {
+        top: 100px;
+        width: 60%;
+        height: 40%;
+        left: 200px;
+    }
+}
+
+@media screen and (max-width:840px) {
+    .bg-backgroun {
+        top: 10px;
+        left: 20px;
+    }
+
+    iframe {
+        width: 460px;
+        height: 220px;
+        top: 100px;
+    }
+
+    ul.images {
+        height: auto;
+        width: 90%;
+    }
+
+    .main-1 {
+        height: auto;
+    }
+
+    ul.images li {
+        flex: 0 0 auto;
+        width: 100px;
+        height: 130px;
+    }
+
+    ul.images li img {
+        flex: 0 0 auto;
+        width: 500px;
+        height: 120px;
+    }
+}
+
+@media screen and (max-width:780px) {
+    iframe {
+        width: 400px;
+        height: 200px;
+        top: 80px;
+        left: 0px;
+    }
+
+    .bg {
+
+        top: 90px;
+        width: 60%;
+        height: 25%;
+        left: 130px;
+    }
+
+    .main-1 {
+        height: auto;
+        top: 310px;
+        left: 20px;
+    }
+
+}
+
+@media screen and (max-width:681px) {
+    iframe {
+        width: 350px;
+        height: 160px;
+        top: 80px;
+        left: 0px;
+    }
+
+    .bg {
+        top: 80px;
+        width: 60%;
+        height: 30%;
+        left: 130px;
+    }
+
+    .main-1 {
+        height: auto;
+        top: 240px;
+        left: 20px;
+    }
+}
+
+@media screen and (max-width:578px) {
+    iframe {
+        width: 300px;
+        height: 160px;
+    }
+
+    .main-1 {
+        height: auto;
+        top: 240px;
+    }
+
+    ul.images li img {
+        height: 100px;
+        width: 90px;
+    }
+
+}
+
+@media screen and (max-width:498px) {
+    iframe {
+        width: 250px;
+        height: 120px;
+    }
+
+    .bg {
+
+        top: 80px;
+        width: 60%;
+        height: 22%;
+        left: 100px;
+    }
+
+    .main-1 {
+        height: auto;
+        top: 210px;
+    }
+
+    ul.images li {
+        height: 100px;
+    }
+
+    ul.images li img {
+        height: 100px;
+        width: 90px;
+    }
+
+}
+
+@media screen and (max-width:434px) {
+    iframe {
+        width: 210px;
+        height: 100px;
+    }
+
+    .bg {
+
+        top: 80px;
+        width: 60%;
+        height: 18%;
+        left: 80px;
+    }
+
+    .main-1 {
+        height: auto;
+        top: 175px;
+        left: 0%;
+    }
+
+    nav ul {
+        width: 100%;
+    }
+
+}
+
+@media screen and (max-width:354px) {
+    header {
+        height: auto;
+    }
+
+    iframe {
+        width: 180px;
+        height: 80px;
+    }
+
+    .bg {
+
+        top: 80px;
+        width: 60%;
+        height: 15%;
+        left: 70px;
+    }
+
+    .main-1 {
+        height: auto;
+        top: 160px;
+    }
+
+    ul.images li {
+        height: 100px;
+    }
+
+    ul.images li img {
+        height: 80px;
+        width: 80px;
+    }
+
+
+}
+
+@media screen and (max-width:354px) {
+    .main-1 {
+        width: 100%;
+        top: 160px;
+        left: 5%;
+    }
+
+    body {
+        width: 350px;
+    }
+}

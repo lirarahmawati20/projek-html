@@ -1,0 +1,688 @@
+ /* style untuk semua konten di body  */
+ * {
+     box-sizing: border-box;
+ }
+
+ /* style untuk body  */
+ body {
+     background: linear-gradient(90deg, rgb(243, 239, 239) 0%,
+             rgb(97, 98, 95) 10%, rgb(182, 180, 180) 100%);
+     padding: 20px;
+     font-family: Arial;
+ }
+
+ /* style untuk header  */
+ header {
+     width: 100%;
+     background-size: cover;
+     background-position: center;
+     position: fixed;
+     top: 0;
+     left: 0;
+     right: 0;
+     z-index: 100;
+
+ }
+
+ /*  style untuk navbar  */
+ nav {
+     display: flex;
+     color: rgb(30, 29, 29);
+     background-color: rgba(224, 224, 224, 0.5);
+     backdrop-filter: blur(10px);
+     padding: 1rem;
+     justify-content: space-around;
+     height: 80px;
+     align-items: center;
+     justify-content: right;
+ }
+
+ /* styele untuk navbar ul  */
+
+ nav ul {
+     width: 50%;
+     display: flex;
+     list-style: none;
+     justify-content: space-between;
+     margin: 20px;
+     padding: 30px;
+ }
+
+ nav ul li a {
+     color: rgb(50, 42, 42);
+     text-decoration: none;
+ }
+
+ nav ul li a:hover {
+     width: 100px;
+     height: 100px;
+     color: rgb(144, 145, 145);
+ }
+
+ a {
+     color: rgb(55, 47, 47);
+     text-decoration: none;
+ }
+
+ nav a:hover {
+     color: rgb(20, 23, 24);
+ }
+
+ a i {
+     font-size: 20px;
+     padding: 30px;
+ }
+
+ /* style untuk span  */
+ .menu-toggle {
+     display: none;
+     flex-direction: column;
+     height: 20px;
+     justify-content: space-between;
+     position: relative;
+ }
+
+ .menu-toggle input {
+     position: absolute;
+     width: 100%;
+     height: 28px;
+     right: -6px;
+     top: -3px;
+     opacity: 0;
+     z-index: 2;
+ }
+
+ .menu-toggle span {
+     display: block;
+     width: 28px;
+     height: 3px;
+     background-color: rgb(60, 72, 62);
+     border-radius: 3px;
+     transition: all 0.5s;
+ }
+
+ /* mengatur titik pusat elemen menjadi di sudut kiri atas */
+ .menu-toggle span:nth-child(2) {
+     transform-origin: 0 0;
+ }
+
+ /* mengatur titik pusat elemen ini menjadi di sudut kiri atas. */
+ .menu-toggle span:nth-child(4) {
+     transform-origin: 0 0;
+ }
+
+ /* ////////////animasi yang berubah ketika tombol toggle (input) dicentang atau tidak dicentang//// */
+ .menu-toggle input:checked~span:nth-child(2) {
+     background-color: rgb(27, 25, 25);
+     transform: rotate(45deg)translate(-1px, -1px);
+ }
+
+ .menu-toggle input:checked~span:nth-child(3) {
+     transform: scale(0);
+ }
+
+ .menu-toggle input:checked~span:nth-child(4) {
+     background-color: rgb(32, 25, 25);
+     transform: rotate(-45deg)translate(-2px, 0);
+ }
+
+ /* media query yang akan diterapkan ketika lebar layar maksimum mencapai 1078 piksel atau kurang */
+ @media screen and (max-width:1078px) {
+     nav ul {
+         display: 50%;
+     }
+ }
+
+ /* media query yang akan diterapkan ketika lebar layar maksimum mencapai 1076 piksel atau kurang */
+ @media screen and (max-width:1076px) {
+     .menu-toggle {
+         display: flex;
+     }
+
+     /* style untuk nav ul */
+     nav ul {
+         position: absolute;
+         left: -20px;
+         top: 32px;
+         width: 30%;
+         height: 100vh;
+         flex-direction: column;
+         justify-content: space-evenly;
+         align-items: center;
+         z-index: -1;
+         background-color: rgba(255, 255, 255, 0.5);
+         backdrop-filter: blur(10px);
+         padding: 1rem;
+         transition: all 1s;
+         opacity: 0;
+     }
+
+     nav ul.slide {
+         opacity: 1;
+         transform: translateX(0)
+     }
+ }
+
+
+ /* ////////////// style buat gambar yang berbaris kebawah  ///////////////// */
+ .bungkis {
+     background-color: #3b3737;
+ }
+
+ .bungkus-gambar {
+     background: linear-gradient(90deg, rgb(193, 177, 177) 0%,
+             rgb(97, 98, 95) 10%, rgb(193, 177, 177) 100%);
+     width: 90%;
+     margin: 60px;
+     border-radius: 50px;
+     height: 450px;
+     display: flex;
+     justify-content: center;
+     text-shadow: #5a2929;
+
+ }
+
+ .bungkus-gambar img {
+     width: 100%;
+     border-radius: 50px;
+     height: 450px;
+     border: 10px solid rgb(49, 48, 48);
+
+ }
+
+
+ /* Titik/peluru/indikator */
+ .dot {
+     height: 15px;
+     width: 15px;
+     margin: 0 2px;
+     background-color: #6b6767;
+     border-radius: 50%;
+     display: inline-block;
+     transition: background-color 0.6s ease;
+ }
+
+
+ .bungkus-gambar {
+     display: none;
+ }
+
+ img {
+     vertical-align: middle;
+ }
+
+ /* style untuk dot  */
+
+ .dot-1 {
+     justify-content: center;
+     text-align: center;
+ }
+
+ .active {
+     background-color: #717171;
+ }
+
+ /* Fading animation */
+ .fade {
+     animation-name: fade;
+     animation-duration: 1.5s;
+ }
+
+ .classHidden {
+     /* untuk mengendalikan apakah elemen terlihat atau tidak pada halaman web */
+     visibility: hidden;
+ }
+
+ .next {
+
+     text-align: center;
+     justify-content: center;
+     padding: 20px;
+ }
+
+ .login-1 {
+     justify-content: right;
+     text-align: rights;
+
+ }
+
+ input {
+     height: 55%;
+     width: 10%;
+     border-radius: 40px;
+     background-color: rgb(200, 197, 197);
+     justify-content: center;
+ }
+
+ /* /////////////////////////////// */
+
+
+ /* ///// style untuk  judul  yang / pernyataan filem yang populer ///  */
+ .judul {
+     background: linear-gradient(90deg, rgb(193, 177, 177) 0%,
+             rgb(97, 98, 95) 10%, rgb(193, 177, 177) 100%);
+     width: 97%;
+     border-radius: 50px;
+     height: 100px;
+     display: flex;
+     margin: 10px;
+     border: 5px solid rgb(44, 41, 41);
+ }
+
+ /* style untuk keterangan judul filem  */
+ .judul p {
+     justify-content: left;
+     margin: 25px;
+     font-size: 40px;
+     font-style: italic;
+     color: azure;
+     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+ }
+
+ /* ////////// stele untuk main  // //////*/
+ .bungkis {
+     -ms-flex: 70%;
+     flex: 70%;
+     background-color: rgb(243, 242, 242);
+     /* padding: 20px; */
+     border: 10px solid rgb(26, 24, 24);
+
+ }
+
+ /* //// bungkus/ wadah untuk gambar gambar flem yang populer   */
+ .bungkus2 {
+     display: flex;
+     flex-wrap: wrap;
+     justify-content: center;
+     /* background-color: aqua; */
+ }
+
+ /* ////////// styele untuk gambar dan wadahnya ///////////// */
+ .main3 {
+     display: flex;
+     justify-content: center;
+     flex-wrap: wrap;
+     padding: 10px;
+     background: linear-gradient(90deg, rgb(193, 177, 177) 0%,
+             rgb(97, 98, 95) 10%, rgb(193, 177, 177) 100%);
+     height: 580px;
+     width: 30%;
+     border-radius: 20px;
+     margin: 15px;
+     border: 10px solid rgb(91, 82, 82);
+
+ }
+
+ .main3:hover {
+     transform: scale(1.02);
+     box-shadow: -3px -3px 7px rgba(0, 0, 0, .9), 3px 3px 5px rgba(0, 0, 0, .9);
+ }
+
+ .fakeimg-1 {
+     justify-content: center;
+     text-align: center;
+ }
+
+ /* style untuk gambar  */
+
+ .main3 img {
+     height: 400px;
+     padding: 15px;
+     width: 100%;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     border-radius: 20px;
+     border: 10px solid rgb(14, 14, 14);
+     transform: scale(1.02);
+     box-shadow: -3px -3px 7px rgba(0, 0, 0, .9), 3px 3px 5px rgba(0, 0, 0, .9);
+
+ }
+
+ .fakeimg1 p {
+     text-align: center;
+ }
+
+ .button-1 {
+     border-radius: 10px;
+     justify-content: center;
+     text-align: center;
+ }
+
+ button {
+     font-size: 20px;
+     width: 150px;
+     height: 30px;
+     border-radius: 40px;
+     justify-content: center;
+     text-align: center;
+
+ }
+
+ button {
+     transform: scale(1.0);
+     box-shadow: -5px -5px 7px rgba(0, 0, 0, .9), 3px 3px 5px rgba(0, 0, 0, 20);
+
+ }
+
+
+ /* ////////////////////////// */
+
+ /* ///// setail untuk garis horizontal ///// */
+ .fakeimg-6 {
+     background-color: #423b3b;
+     width: 100%;
+     height: 100px;
+ }
+
+ /* /////////////////////// */
+ /* //// style untuk  footer  */
+
+ .footer-1 {
+     padding: 50px;
+     text-align: center;
+     background: linear-gradient(90deg, rgb(193, 177, 177) 0%,
+             rgb(97, 98, 95) 10%, rgb(193, 177, 177) 100%);
+ }
+
+ .footer-1 a {
+     padding: 30px;
+     color: aliceblue;
+     font-size: 20px;
+
+     font-family: 'Courier New', Courier, monospace;
+
+ }
+
+ /* style untuk tulisan copy @ */
+
+ h3 {
+     font-style: italic;
+     font-size: 40px;
+ }
+
+ .footer-1:hover {
+     transform: scale(1.02);
+     box-shadow: -3px -3px 7px rgba(0, 0, 0, .9), 3px 3px 5px rgba(0, 0, 0, .9);
+
+ }
+
+ .tombol:hover {
+     transform: scale(1.02);
+     box-shadow: -3px -3px 7px rgba(0, 0, 0, .9), 3px 3px 5px rgba(0, 0, 0, .9);
+
+ }
+
+ /* /////////////////////// */
+
+ /* Tata letak responsif - bila lebar layar kurang dari 1070px, buat tautan navigasi menumpuk di atas satu sama lain, bukan di samping satu sama lain */
+
+ @media screen and (max-width: 1070px) {
+     .fakeimg img {
+         width: 100%;
+         padding: 0px;
+         margin: 0px;
+         height: auto;
+         border-radius: 30px;
+     }
+ }
+
+ /* Tata letak responsif - bila lebar layar kurang dari 1230x, buat tautan navigasi menumpuk di atas satu sama lain, bukan di samping satu sama lain */
+
+ @media screen and (max-width: 1230px) {
+     .main3 {
+         display: flex;
+         width: 35%;
+         height: 100%;
+     }
+ }
+
+
+ /* Tata letak responsif - bila lebar layar kurang dari 700px, buat tautan navigasi menumpuk di atas satu sama lain, bukan di samping satu sama lain */
+ @media screen and (max-width: 700px) {
+     .main3 {
+         display: flex;
+         width: 70%;
+         height: 100%;
+     }
+
+     .bungkus2 button {
+         width: 30%;
+     }
+ }
+
+
+ /* Responsive layout - when the screen is less than 500px wide, make the navigation links stack on top of each other instead of next to each other */
+ @media screen and (max-width: 500px) {
+     .main3 {
+         display: flex;
+         width: 100%;
+         height: 100%;
+     }
+
+
+     .navbar a {
+         float: none;
+         width: 100%;
+     }
+
+     .header-1 h1 {
+         font-size: 100%;
+     }
+
+     .bungkis img {
+         border-radius: 0px;
+     }
+
+     nav ul {
+
+         width: 40%;
+
+     }
+ }
+
+ /* styele untuk hider dan gambar  bika   layar berada di ukuran max width 400*/
+ @media screen and (max-width: 400px) {
+     .header-1 {
+         width: 100%;
+     }
+
+     .header-1 h1 {
+         font-size: medium;
+     }
+
+     .side {
+         width: 100%;
+     }
+
+     .main-1 {
+         width: 100%;
+         padding: 5px;
+     }
+
+     .bungkis {
+         width: 100%;
+     }
+
+     .fakeimg img {
+         width: 100%;
+         height: 100%;
+         padding: 0px;
+         margin: 0px;
+     }
+
+     .bungkus-gambar {
+         width: 80%;
+         height: 60%;
+
+     }
+
+     .bungkis img {
+         width: 100%;
+     }
+
+     .judul {
+         height: 40px;
+
+     }
+
+     .judul p {
+         font-size: small;
+         margin: 5px;
+         padding: 0px;
+     }
+
+     nav ul {
+
+         width: 100%;
+
+     }
+
+     .button-1 button {
+         font-size: small;
+         width: 70%;
+     }
+ }
+
+ /* styele untuk hider dan gambar  bika   layar berada di ukuran max width 375*/
+
+ @media screen and (max-width: 375px) {
+     .bungkis {
+         width: 100%;
+         height: 80%;
+         /* flex-direction: column; */
+
+     }
+
+     .main-1 {
+         width: 100%;
+         height: 80%;
+
+
+     }
+
+     .fakeimg-1 {
+         width: 90%;
+
+     }
+
+     .bungkis img {
+         width: 100%;
+         bottom: 20%;
+         border-radius: 0px;
+
+     }
+
+     .navbar {
+         width: 100%;
+     }
+
+     .bungkus-gambar {
+         width: 100%;
+         height: 60%;
+
+     }
+ }
+
+
+ /* styele untuk hider dan gambar  bika   layar berada di ukuran max width 360*/
+
+ @media screen and (max-width: 360px) {
+     .navbar {
+         width: 100%;
+     }
+
+     .fakeimg1 {
+         width: 100%;
+         height: 100%;
+     }
+
+
+
+     .bungkis img {
+         width: 100%;
+         height: 100%;
+         border-radius: 0px;
+     }
+
+     .bungkis p {
+         font-size: small;
+
+
+     }
+
+
+     .button-1 button {
+         font-size: small;
+         width: 70%;
+     }
+
+     .next button {
+         font-size: small;
+         width: 70%;
+     }
+
+     .bungkus-gambar {
+
+         width: 100%;
+         height: 60%;
+
+
+     }
+
+     .judul {
+         height: 30px;
+     }
+
+     .judul p {
+         margin: 2px;
+         font-size: small;
+     }
+
+     .footer-1 {
+         font-size: small;
+     }
+
+     input {
+         width: 90%;
+     }
+
+ }
+
+ /* styele untuk hider dan gambar  bika   layar berada di ukuran max width 290*/
+
+
+ @media screen and (max-width: 290px) {
+     h2 {
+         font-size: small;
+
+     }
+
+     .bungkus-gambar img {
+         width: 100%;
+         height: 100%;
+     }
+ }
+
+ .main-1 {
+     display: -ms-flexbox;
+     display: flex;
+     -ms-flex-wrap: wrap;
+     flex-wrap: wrap;
+ }
+
+ .side {
+     -ms-flex: 35%;
+     flex: 30%;
+     background-color: #5c5757;
+     padding: 10px;
+ }
+
+ h2 {
+     font-size: 60px;
+     color: white;
+     justify-content: center;
+     text-align: center;
+     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+ }
