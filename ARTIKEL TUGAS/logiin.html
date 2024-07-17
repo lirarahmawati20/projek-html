@@ -1,0 +1,150 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Halaman Login</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            outline: 0;
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        body {
+            height: 100vh;
+            background-image: url(https://i.pinimg.com/564x/88/a8/17/88a8172de9d5858a4eeb133e4cba0e8f.jpg);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .container {
+            padding: 20px 25px;
+            width: 300px;
+            background-color: rgba(3, 27, 66, 0.7);
+            box-shadow: 0 0 10px rgba(143, 192, 30, 0.3);
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+
+        .container h1 {
+            text-align: center;
+            color: #f1f2f8;
+            margin-bottom: 30px;
+            text-transform: uppercase;
+            border-bottom: 4px solid #2979ff;
+        }
+
+        .container label {
+            text-align: left;
+            color: #f1f1f1;
+        }
+
+        .container form input {
+            width: calc(100% - 20px);
+            padding: 8px 10px;
+            margin-bottom: 15px;
+            border: none;
+            background-color: transparent;
+            border-bottom: 2px solid #2979ff;
+            color: #fff;
+            font-size: 20px;
+        }
+
+        .container form button {
+            width: 100%;
+            padding: 5px 0;
+            border: none;
+            background-color: #2979ff;
+            font-size: 18px;
+            color: #fafafa;
+            cursor: pointer;
+        }
+
+        .container form button:hover {
+            background-color: #2196f3;
+        }
+
+        .container form p {
+            color: #fff;
+        }
+
+        .container form a {
+            color: #fff;
+            text-decoration: underline;
+        }
+
+        header {
+            background-color: #243b65;
+            color: white;
+            padding: 30px 0;
+            width: 100%;
+            text-align: center;
+            position: fixed;
+            top: 0;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin: 0 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        footer {
+            background-color: #243b65;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Beranda</a></li>
+                <li><a href="logiin.html">Login</a></li>
+                <li><a href="about.html">Tentang Kami</a></li>
+                <li><a href="services.html">Layanan</a></li>
+                <li><a href="contact.html">Kontak</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h1>Login</h1>
+        <form>
+            <label>Username</label><br>
+            <input type="text"><br>
+            <label>Password</label><br>
+            <input type="password"><br>
+            <button>Log in</button>
+            <p>Forgot Password? <a href="#">Click here</a></p>
+            <p>Don't have an account? <a href="#">Create New Account</a></p>
+        </form>
+    </div>
+
+    <footer>
+        <p>&copy; Tugas Imelda Novianty (Kesehatan)</p>
+    </footer>
+</body>
+</html>

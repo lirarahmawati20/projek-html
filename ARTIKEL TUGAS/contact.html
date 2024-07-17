@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontak - Kesehatan Anda</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        body {
+            background-image: url(https://i.pinimg.com/564x/88/a8/17/88a8172de9d5858a4eeb133e4cba0e8f.jpg);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            background-color: #243b65;
+            color: white;
+            padding: 10px 0;
+            width: 100%;
+            text-align: center;
+            position: fixed;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin: 0 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        main {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            padding-top: 70px; /* To offset the fixed header */
+        }
+
+        .contact {
+            background-color: rgba(3, 27, 66, 0.7);
+            color: #f1f2f8;
+            padding: 20px 25px;
+            width: 80%;
+            max-width: 800px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(143, 192, 30, 0.3);
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .contact h1 {
+            margin-bottom: 20px;
+        }
+
+        .contact p {
+            margin-bottom: 20px;
+        }
+
+        .contact ul {
+            list-style: none;
+            padding: 0;
+            text-align: left;
+        }
+
+        .contact ul li {
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+
+        footer {
+            background-color: #243b65;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Beranda</a></li>
+                <li><a href="logiin.html">Login</a></li>
+                <li><a href="about.html">Tentang Kami</a></li>
+                <li><a href="services.html">Layanan</a></li>
+                <li><a href="contact.html">Kontak</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="contact">
+            <h1>Kontak Kami</h1>
+            <p>Hubungi kami untuk informasi lebih lanjut atau konsultasi.</p>
+            <ul>
+                <li>Email: info@kesehatananda.com</li>
+                <li>Telepon: +62098765432</li>
+                <li>Alamat: Jalan Kesehatan No. 123, Kota Sehat</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; Tugas Imelda Novianty (Kesehatan)</p>
+    </footer>
+</body>
+</html>
